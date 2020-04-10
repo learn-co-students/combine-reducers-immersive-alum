@@ -6,22 +6,22 @@ import Books from './components/Books';
 
 
 export class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div>
-          <h2>Authors</h2>
-          <AuthorInput />
-          <Authors />
-        </div>
-        <div>
-          <h2>Book</h2>
-          <BookInput />
-          <Books />
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+				<div>
+					<h2>Authors</h2>
+					<AuthorInput />
+					<Authors />
+				</div>
+				<div>
+					<h2>Book</h2>
+					<BookInput />
+					<Books />
+				</div>
+			</div>
+		);
+	}
 };
 
 export default App;

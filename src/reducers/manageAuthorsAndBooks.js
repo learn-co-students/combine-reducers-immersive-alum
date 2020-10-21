@@ -1,7 +1,7 @@
 export default function bookApp(
   state = {
     authors: [],
-    books: []
+    books: [],
   },
   action
 ) {
@@ -10,27 +10,30 @@ export default function bookApp(
     case "ADD_BOOK":
       return {
         ...state,
-        books: [...state.books, action.book]
+        books: [...state.books, action.book],
       };
 
     case "REMOVE_BOOK":
-      idx = state.books.findIndex(book => book.id === action.id);
+      idx = state.books.findIndex((book) => book.id === action.id);
       return {
         ...state,
-        books: [...state.books.slice(0, idx), ...state.books.slice(idx + 1)]
+        books: [...state.books.slice(0, idx), ...state.books.slice(idx + 1)],
       };
 
     case "ADD_AUTHOR":
       return {
         ...state,
-        authors: [...state.authors, action.author]
+        authors: [...state.authors, action.author],
       };
 
     case "REMOVE_AUTHOR":
-      idx = state.authors.findIndex(author => author.id === action.id);
+      idx = state.authors.findIndex((author) => author.id === action.id);
       return {
         ...state,
-        authors: [...state.authors.slice(0, idx), ...state.authors.slice(idx + 1)]
+        authors: [
+          ...state.authors.slice(0, idx),
+          ...state.authors.slice(idx + 1),
+        ],
       };
 
     default:
